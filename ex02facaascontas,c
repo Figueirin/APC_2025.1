@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int faz_conta_direito(int x, char c){
+
+    int parcelas[x];
+    int resultado;
+
+    for(int i = 0; i < x; i++){
+        scanf("%d", &parcelas[i]);
+    }
+
+    if(c == '+'){
+        resultado = 0;
+        for(int i = 0; i < x; i++){
+            resultado += parcelas[i];
+        }
+    } else if(c == '-') {    
+        resultado = parcelas[0];
+        for(int i = 1; i < x; i++){    
+            resultado -= parcelas[i];
+    }
+    }
+    return resultado;
+}
